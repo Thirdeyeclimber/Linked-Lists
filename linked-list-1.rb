@@ -25,10 +25,6 @@ def print_values(list_node)
 	end
 end
 
-# Call Statement
-print_values(node3)
-puts "----------------------"
-
 
 # Stack Class
 class Stack
@@ -49,15 +45,15 @@ class Stack
 	end
 end
 
-# Create a stack
+# Create a new stack
 stack = Stack.new
 
 # Adding to stack
-stack.push(33)
-stack.push(44)
-stack.push(55)
+stack.push("one")
+stack.push("two")
+stack.push("three")
 # Iterative approach
-10.times do |i|
+3.times do |i|
 	stack.push(i + 1)
 end
 
@@ -67,6 +63,23 @@ stack.pop
 stack.pop
 stack.pop
 # Iterative approach
-12.times do
+4.times do
 	stack.pop
 end	
+
+puts "---------------"
+
+
+def reverse_list(list)
+	stack = Stack.new
+	while list
+		stack.push(list.value)
+		list = list.next_node
+	end
+	return stack.data
+end
+
+print_values(node3)
+puts "---------------"
+revlist = reverse_list(node3)
+print_values(revlist)
