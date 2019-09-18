@@ -1,5 +1,3 @@
-
-# Linked list Class
 class LinkedListNode
   attr_accessor :value, :next_node
 
@@ -21,10 +19,8 @@ def print_values(list_node)
     print_values(list_node.next_node)
   else
     print "nil\n"
-    return
   end
 end
-
 
 # Stack Class
 class Stack
